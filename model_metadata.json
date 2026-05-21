@@ -1,0 +1,30 @@
+{
+  "class_indices": {
+    "black_sigatoka": 0,
+    "healthy": 1
+  },
+  "idx_to_class": {
+    "0": "black_sigatoka",
+    "1": "healthy"
+  },
+  "class_names": [
+    "healthy",
+    "black_sigatoka"
+  ],
+  "img_size": [
+    224,
+    224
+  ],
+  "model_architecture": "ResNet50",
+  "num_classes": 2,
+  "trained_on": "Banana Leaf Disease Dataset (Kaggle)",
+  "author": "Odeyemi Stacey Israel \u2014 2021/10849",
+  "university": "Bells University of Technology, Ota",
+  "project": "Plantain Leaf Disease Recognition Using CNN",
+  "test_accuracy": 1.0,
+  "test_precision": 1.0,
+  "test_recall": 1.0,
+  "test_auc": 0.9999999403953552,
+  "test_f1": 0.999999995,
+  "date_trained": "2026-03-29 00:50:49"
+}
