@@ -6,6 +6,8 @@ import time
 import io
 from PIL import Image
 from datetime import datetime
+import tf_keras as keras  # instead of tf.keras
+model = keras.models.load_model(MODEL_PATH)
 
 st.set_page_config(
     page_title="PlantAI — Plantain Disease Detector",
