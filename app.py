@@ -6,8 +6,15 @@ import time
 import io
 from PIL import Image
 from datetime import datetime
-import tf_keras as keras  # instead of tf.keras
-model = keras.models.load_model(MODEL_PATH)
+from huggingface_hub import hf_hub_download
+import os
+
+if not os.path.exists("plantain_disease_compressed.h5"):
+    hf_hub_download(
+        repo_id="KingDavid0fficial/plantain-disease-model",
+        filename="plantain_disease_compressed.h5",
+        local_dir="."
+    )
 
 st.set_page_config(
     page_title="PlantAI — Plantain Disease Detector",
@@ -365,7 +372,7 @@ bg      = "#0F1117"  if dark else "#F5F7FA"
 def load_model_and_metadata():
     import tensorflow as tf
     from tensorflow.keras.applications.resnet import preprocess_input
-    MODEL_PATH    = "plantain_disease_resnet152.h5"
+    MODEL_PATH    = "plantain_disease_compressed.h5"
     METADATA_PATH = "model_metadata.json"
     if not os.path.exists(MODEL_PATH):
         return None, None, None, f"Model file not found: '{MODEL_PATH}'"
